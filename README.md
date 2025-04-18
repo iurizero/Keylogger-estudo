@@ -24,11 +24,9 @@ A página de login permite que os usuários insiram um email ou telefone e uma s
 
 1. Clone este repositório.
 2. Certifique-se de ter o Python e o Flask instalados em sua máquina. Você pode fazer isso executando o seguinte comando no terminal:
-    ```pip install flask
-    ```
+    ```pip install flask```
 3. Execute o servidor Flask com o comando:
-    ```python app.py
-    ```
+    ```python app.py```
 4. Abra o arquivo `index.html` em seu navegador.
 5. Certifique-se de que o servidor local está rodando na porta 5000 para receber os dados enviados pelo formulário.
 6. Agora é só inserir um usuário e senha pra testes e ele sera salvo no arquivo captura.json (Clicando você verá os dados inseridos)
