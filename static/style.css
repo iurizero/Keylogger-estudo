@@ -1,0 +1,323 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Estilos específicos para cada rede social */
+body[data-theme="facebook"] {
+    background: #f0f2f5;
+}
+
+body[data-theme="instagram"] {
+    background: #fafafa;
+}
+
+body[data-theme="linkedin"] {
+    background: #f3f2ef;
+}
+
+body[data-theme="twitter"] {
+    background: #000000;
+}
+
+/* Container de login */
+.login-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 396px;
+    margin: 20px;
+    text-align: center;
+    animation: slideUp 0.5s ease-out;
+    transform-origin: center;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+body[data-theme="twitter"] .login-box {
+    background: #000000;
+    border: 1px solid #2f3336;
+    color: white;
+}
+
+/* Logo */
+.logo {
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    animation: logoFadeIn 0.8s ease-out;
+}
+
+@keyframes logoFadeIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+body[data-theme="facebook"] .logo {
+    width: 240px;
+    height: auto;
+}
+
+body[data-theme="instagram"] .logo {
+    width: 175px;
+    height: auto;
+}
+
+body[data-theme="linkedin"] .logo {
+    width: 200px;
+    height: auto;
+}
+
+body[data-theme="twitter"] .logo {
+    width: 40px;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+/* Títulos */
+h2 {
+    margin: 0 0 20px;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+}
+
+body[data-theme="facebook"] h2 {
+    color: #1c1e21;
+}
+
+body[data-theme="instagram"] h2 {
+    color: #262626;
+}
+
+body[data-theme="linkedin"] h2 {
+    color: #0a66c2;
+}
+
+body[data-theme="twitter"] h2 {
+    color: #ffffff;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    border: 1px solid #dddfe2;
+    font-size: 17px;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+    animation: inputFadeIn 0.5s ease-out;
+    animation-fill-mode: both;
+}
+
+@keyframes inputFadeIn {
+    from {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+input[type="text"] {
+    animation-delay: 0.2s;
+}
+
+input[type="password"] {
+    animation-delay: 0.3s;
+}
+
+body[data-theme="facebook"] input {
+    background: #ffffff;
+}
+
+body[data-theme="instagram"] input {
+    background: #fafafa;
+    border: 1px solid #dbdbdb;
+}
+
+body[data-theme="linkedin"] input {
+    background: #ffffff;
+    border: 1px solid #d0d0d0;
+}
+
+body[data-theme="twitter"] input {
+    background: #000000;
+    border: 1px solid #2f3336;
+    color: #ffffff;
+}
+
+/* Botões */
+button {
+    width: 100%;
+    padding: 14px;
+    border-radius: 6px;
+    border: none;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 6px;
+    transition: all 0.2s ease;
+    animation: buttonFadeIn 0.5s ease-out;
+    animation-delay: 0.4s;
+    animation-fill-mode: both;
+}
+
+@keyframes buttonFadeIn {
+    from {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+body[data-theme="facebook"] button {
+    background: #1877f2;
+    color: white;
+}
+
+body[data-theme="instagram"] button {
+    background: #0095f6;
+    color: white;
+}
+
+body[data-theme="linkedin"] button {
+    background: #0a66c2;
+    color: white;
+}
+
+body[data-theme="twitter"] button {
+    background: #ffffff;
+    color: #000000;
+}
+
+/* Links e textos adicionais */
+.additional-links {
+    margin-top: 20px;
+    text-align: center;
+    animation: linksFadeIn 0.5s ease-out;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+}
+
+@keyframes linksFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.additional-links a {
+    color: #1877f2;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+body[data-theme="instagram"] .additional-links a {
+    color: #0095f6;
+}
+
+body[data-theme="linkedin"] .additional-links a {
+    color: #0a66c2;
+}
+
+body[data-theme="twitter"] .additional-links a {
+    color: #1d9bf0;
+}
+
+.divider {
+    margin: 20px 0;
+    border-top: 1px solid #dddfe2;
+    animation: dividerFadeIn 0.5s ease-out;
+    animation-delay: 0.6s;
+    animation-fill-mode: both;
+}
+
+@keyframes dividerFadeIn {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    to {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+body[data-theme="twitter"] .divider {
+    border-color: #2f3336;
+}
+
+/* Hover effects */
+button:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+input:focus {
+    outline: none;
+    border-color: #1877f2;
+    box-shadow: 0 0 0 2px rgba(24, 119, 242, 0.1);
+}
+
+body[data-theme="instagram"] input:focus {
+    border-color: #0095f6;
+    box-shadow: 0 0 0 2px rgba(0, 149, 246, 0.1);
+}
+
+body[data-theme="linkedin"] input:focus {
+    border-color: #0a66c2;
+    box-shadow: 0 0 0 2px rgba(10, 102, 194, 0.1);
+}
+
+body[data-theme="twitter"] input:focus {
+    border-color: #1d9bf0;
+    box-shadow: 0 0 0 2px rgba(29, 155, 240, 0.1);
+}
+
+/* Responsividade */
+@media (max-width: 450px) {
+    .login-box {
+        width: 90%;
+        margin: 10px;
+    }
+}

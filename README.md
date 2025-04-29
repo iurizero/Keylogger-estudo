@@ -1,32 +1,97 @@
+# ShadowKey Estudo
 
-# ShadowKey
-Este é um projeto de uma página de login fake do Facebook a fim de estudos, desenvolvido com HTML, CSS, JavaScript e Python (Flask).
+Este é um projeto de ESTUDO que simula páginas de login de redes sociais para fins educacionais. O projeto demonstra como criar interfaces web realistas e como implementar um sistema de coleta de dados básico.
 
-## Descrição
+## 🚀 Funcionalidades
 
-A página de login permite que os usuários insiram um email ou telefone e uma senha. Quando o botão "Entrar" é clicado, os dados são enviados para um servidor local usando uma requisição `fetch`. O servidor, desenvolvido com Flask, registra os dados em um arquivo JSON.
+- Páginas de login simuladas para:
+  - Facebook
+  - Instagram
+  - LinkedIn
+  - Twitter (X)
+- Interface visual semelhante às plataformas originais
+- Animações e transições realistas
+- Armazenamento de dados em arquivos JSON
 
-## Tecnologias Utilizadas
+## 📋 Pré-requisitos
 
-- HTML
-- CSS
-- JavaScript
-- Python (Flask)
+- Python 3.x
+- Flask
+- Flask-CORS
 
-## Estrutura do Projeto
+## 🔧 Instalação
 
-- `index.html`: Contém a estrutura HTML da página.
-- `style.css`: Contém os estilos CSS para a página.
-- `script.js`: Contém o código JavaScript para manipulação dos inputs e envio dos dados.
-- `app.py`: Contém o código Python para o servidor Flask que registra os dados.
+1. Clone o repositório:
+```bash
+git clone https://github.com/seu-usuario/keylogger-estudo.git
+cd keylogger-estudo
+```
 
-## Como Executar o Projeto
+2. Instale as dependências:
+```bash
+pip install -r requirements.txt
+```
 
-1. Clone este repositório.
-2. Certifique-se de ter o Python e o Flask instalados em sua máquina. Você pode fazer isso executando o seguinte comando no terminal:
-    ```pip install flask```
-3. Execute o servidor Flask com o comando:
-    ```python app.py```
-4. Abra o arquivo `index.html` em seu navegador.
-5. Certifique-se de que o servidor local está rodando na porta 5000 para receber os dados enviados pelo formulário.
-6. Agora é só inserir um usuário e senha pra testes e ele sera salvo no arquivo captura.json (Clicando você verá os dados inseridos)
+## 🎮 Como Usar
+
+1. Inicie o servidor:
+```bash
+python server.py
+```
+
+2. Acesse as páginas de login:
+- Facebook: `http://localhost:5000/`
+- Instagram: `http://localhost:5000/instagram`
+- LinkedIn: `http://localhost:5000/linkedin`
+- Twitter: `http://localhost:5000/twitter`
+
+## 📁 Estrutura do Projeto
+
+```
+keylogger-estudo/
+├── data/                  # Pasta para armazenar os dados capturados
+│   ├── captura_facebook.json
+│   ├── captura_instagram.json
+│   ├── captura_linkedin.json
+│   └── captura_twitter.json
+├── static/                # Arquivos estáticos (CSS, JS, imagens)
+│   ├── style.css
+│   ├── script.js
+│   └── images/
+├── templates/             # Templates HTML
+│   ├── index.html
+│   ├── instagram.html
+│   ├── linkedin.html
+│   └── twitter.html
+├── server.py             # Servidor Flask
+└── requirements.txt      # Dependências do projeto
+```
+
+## 📝 Formato dos Dados
+
+Os dados são armazenados em arquivos JSON com o seguinte formato:
+```json
+{
+    "timestamp": "DD/MM/YYYY HH:MM:SS",
+    "rede_social": "nome_da_rede",
+    "email": "email@exemplo.com",
+    "senha": "senha123"
+}
+```
+
+## ⚠️ Aviso Legal
+
+Este projeto é apenas para fins educacionais. O uso deste software para atividades maliciosas é estritamente proibido. O desenvolvedor não se responsabiliza pelo uso indevido deste código.
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+## 👨‍💻 Autor
+
+- Nome: [Iuri Costa]
+- GitHub: [@seu-usuario](https://github.com/iurizero)
+
+## 🤝 Contribuições
+
+Contribuições são sempre bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests.
